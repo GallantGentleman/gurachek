@@ -1,3 +1,5 @@
+<!-- Background-color : #2b5c73; -->
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -8,22 +10,23 @@
 
     <link href="<?=SITE_NAME;?>src/css/bootstrap.css" rel="stylesheet">
     <link href="<?=SITE_NAME;?>src/css/offcanvas.css" rel="stylesheet">
+    <link href="<?=SITE_NAME;?>src/css/common.css" rel="stylesheet">
     <link rel="shortcut icon" href="<?=SITE_NAME;?>src/img/favicon.ico" type="image/x-icon">
 
 </head>
 
-<body style="background: url(<?=SITE_NAME;?>src/img/bg.jpg) repeat;">
+<body style="background: url(<?=SITE_NAME;?>src/img/bg.png) repeat;">
 <nav class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
         <div class="navbar-header">
 
-            <a class="navbar-brand" href="<?=SITE_NAME;?>">MotoDriver</a>
+            <a class="navbar-brand" href="<?=SITE_NAME;?>"><em><b><span style="color: #2b5c73;">P</span><span style="color: #732b32;">P</span></b></em> Manager</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="<?=SITE_NAME;?>">Main</a></li>
-                <li><a href="<?=SITE_NAME;?>about">About</a></li>
-                <li><a href="<?=SITE_NAME;?>contacts">Contacts</a></li>
+                <li class="active"><a href="<?=SITE_NAME;?>">Главная</a></li>
+                <li><a href="<?=SITE_NAME;?>about">О сайте</a></li>
+                <li><a href="<?=SITE_NAME;?>contacts">Контакты</a></li>
             </ul>
         </div>
     </div>

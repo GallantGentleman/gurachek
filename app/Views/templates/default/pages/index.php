@@ -1,50 +1,33 @@
 <div class="row">
-    <div class="col-xs-6 col-lg-4">
-        <div class="thumbnail">
-            <img src="<?=SITE_NAME;?>src/img/moto/moto1.jpg" class="img-rounded" width="" height="">
-            <p></p>
-            <div class="caption">
-                <h2>
-                    Moto
-                    <span class="badge">6</span>
-                </h2>
-                <p>
-                    Every school has a library. Pupils come to the library to take books on different subjects.
-                    The school library where Oleg studies is good. It is a large clean room.
-                </p>
-            </div>
-            <p class="text-right"><a class="btn btn-warning" href="list" role="button">Learn &raquo;</a></p>
-        </div>
-    </div>
 
+    <?php for($i = 0; $i < count($data); $i++) { ?>
 
-    <div class="col-xs-6 col-lg-4">
-        <div class="thumbnail">
-            <img src="<?=SITE_NAME;?>src/img/moto/moto2.jpg" class="img-rounded" width="" height="">
-            <p></p>
-            <div class="caption">
-                <h2>Equipment <span class="badge">8</span></h2>
-                <p>
-                    Every school has a library. Pupils come to the library to take books on different subjects.
-                    The school library where Oleg studies is good. It is a large clean room.
-                </p>
-            </div>
-            <p class="text-right"><a class="btn btn-warning" href="list" role="button">Learn &raquo;</a></p>
-        </div>
-    </div>
+    <?php
 
-    <div class="col-xs-6 col-lg-4">
-        <div class="thumbnail">
-            <img src="<?=SITE_NAME;?>src/img/moto/moto3.jpg" class="img-rounded" width="" height="">
-            <p></p>
-            <div class="caption">
-                <h2>Accessories <span class="badge">12</span></h2>
-                <p>
-                    Every school has a library. Pupils come to the library to take books on different subjects.
-                    The school library where Oleg studies is good. It is a large clean room.
-                </p>
-            </div>
-            <p class="text-right"><a class="btn btn-warning" href="list" role="button">Learn &raquo;</a></p>
-        </div>
-    </div>
+    if(!empty($data[$i]['img'])) {
+      $image = $data[$i]['img'];
+    } else {
+      $image = "noimage.png";
+    }
+
+    ?>
+
+      <div class="col-xs-6 col-lg-4">
+          <div id="block" class="thumbnail" style="background: url(<?=SITE_NAME;?>src/img/content-bg.png);border: 0px;">
+              <a href="<?=SITE_NAME;?>project/index/<?=$data[$i]['id'];?>">
+                <img src="<?=SITE_NAME;?>src/img/projects/<?=$image;?>" class="img-rounded" width="261" height="195">
+              </a>
+              <p></p>
+              <div class="caption">
+                  <h2>
+                      <?=$data[$i]['name'];?>
+                      <span class="badge">2</span>
+                  </h2>
+                  <p><?=$data[$i]['desc'];?></p>
+              </div>
+          </div>
+      </div>
+
+    <?php } ?>
+
 </div>
