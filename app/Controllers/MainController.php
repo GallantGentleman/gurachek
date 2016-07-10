@@ -10,7 +10,7 @@ class MainController extends \riki\core\Controller {
     }
 
     function actionIndex() {
-        $this->view->generateView('template', 'index');
+        $this->view->generateView('template', 'index', $this->model->getData());
     }
 
 }

@@ -2,12 +2,14 @@
 
 namespace riki\core;
 
+use PDO;
+
 abstract class Model {
 
-    private $model;
+    public $db;
 
     function __construct() {
-        $this->model = new PDO("mysql:host=localhost;dbname=pp-manager", "root", "");
+        $this->db = new PDO("mysql:host=localhost;dbname=pp-manager", "root", "");
     }
 
     abstract function getData();

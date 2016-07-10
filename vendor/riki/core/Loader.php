@@ -10,8 +10,6 @@ class Loader {
 
         $namespace = array_shift($arr);
 
-        //$mvc = array_shift($arr);
-
         $file = array_pop($arr);
 
         if($namespace == 'app') {
