@@ -21,11 +21,11 @@ class Router {
 
         $arr = explode('/', $uri);
 
-        if ((!empty($arr[1])) && (isset($arr[1]))) {
-            $controller = $this->namespace . ucfirst($arr[1]);
+        if ((!empty($arr[3])) && (isset($arr[3]))) {
+            $controller = $this->namespace . ucfirst($arr[3]);
 
-            if ((!empty($arr[2])) && (isset($arr[2]))) {
-                $action = $arr[2];
+            if ((!empty($arr[4])) && (isset($arr[4]))) {
+                $action = $arr[4];
             }
 
         }

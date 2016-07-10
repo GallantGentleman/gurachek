@@ -4,19 +4,23 @@ class Loader {
 
     public static function autoload($className) {
 
+        $fileName = "";
+
         $arr = explode("\\", $className);
 
         $namespace = array_shift($arr);
+
+        //$mvc = array_shift($arr);
 
         $file = array_pop($arr);
 
         if($namespace == 'app') {
 
-            $fileName = 'app/controllers/' . $file;
-            
+            $fileName = 'app/' . $arr[0] . '/' . $file;
+
         } elseif($namespace == 'riki') {
 
-            $fileName = 'vendor/riki/' . array_shift($arr) . '/' . $file;
+            $fileName = 'vendor/riki/' . $arr[0] . '/' . $file;
 
         }
 

@@ -12,7 +12,7 @@
 
 </head>
 
-<body style="background: url(<?=SITE_NAME;?>src/img/bg.jpg) no-repeat;">
+<body style="background: url(<?=SITE_NAME;?>src/img/bg.jpg) repeat;">
 <nav class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
         <div class="navbar-header">
@@ -22,8 +22,8 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="<?=SITE_NAME;?>">Main</a></li>
-                <li><a href="<?=SITE_NAME;?>/about">About</a></li>
-                <li><a href="<?=SITE_NAME;?>/contacts">Contacts</a></li>
+                <li><a href="<?=SITE_NAME;?>about">About</a></li>
+                <li><a href="<?=SITE_NAME;?>contacts">Contacts</a></li>
             </ul>
         </div>
     </div>
