@@ -5,8 +5,9 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
 
-    <title>About Boto</title>
+    <title>People Projects Manager</title>
 
     <link href="<?=SITE_NAME;?>src/css/bootstrap.css" rel="stylesheet">
     <link href="<?=SITE_NAME;?>src/css/offcanvas.css" rel="stylesheet">
@@ -15,7 +16,7 @@
 
 </head>
 
-<body style="background: url(<?=SITE_NAME;?>src/img/bg.png) repeat;">
+<body style="background: #444;">
 <nav class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
         <div class="navbar-header">

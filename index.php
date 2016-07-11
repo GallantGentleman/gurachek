@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 define("SITE_NAME", 'http://localhost/pets/pp/');
 

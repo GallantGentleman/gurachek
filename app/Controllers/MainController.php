@@ -10,7 +10,17 @@ class MainController extends \riki\core\Controller {
     }
 
     function actionIndex() {
-        $this->view->generateView('template', 'index', $this->model->getData());
+
+        $tmp = 'template';
+        $page = 'index';
+        $model = $this->model->getData();
+
+        if(isset($_SESSION['auth']))  {
+          $tmp  = 'login';
+          $page = 'auth';
+        }
+
+        $this->view->generateView($tmp, $page, $model);
     }
 
 }

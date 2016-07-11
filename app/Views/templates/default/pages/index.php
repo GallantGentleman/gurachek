@@ -1,4 +1,7 @@
 <div class="row">
+    <div class="col-lg-12">
+      <div class="thumbnail" style="background: white;">
+
 
     <?php for($i = 0; $i < count($data); $i++) { ?>
 
@@ -12,22 +15,20 @@
 
     ?>
 
-      <div class="col-xs-6 col-lg-4">
-          <div id="block" class="thumbnail" style="background: url(<?=SITE_NAME;?>src/img/content-bg.png);border: 0px;">
-              <a href="<?=SITE_NAME;?>project/index/<?=$data[$i]['id'];?>">
-                <img src="<?=SITE_NAME;?>src/img/projects/<?=$image;?>" class="img-rounded" width="261" height="195">
-              </a>
-              <p></p>
-              <div class="caption">
-                  <h2>
-                      <?=$data[$i]['name'];?>
-                      <span class="badge">2</span>
-                  </h2>
-                  <p><?=$data[$i]['desc'];?></p>
-              </div>
-          </div>
-      </div>
+                <div class="caption" stype="margin-left: 50px;">
+                    <h3>
+                        <span class="glyphicon glyphicon-folder-open"> </span>
+                         <a style="margin-left: 5px;" href="<?=SITE_NAME;?>project/index/<?=$data[$i]['id'];?>"><?=$data[$i]['name'];?></a>
+                        <span class="badge">2</span>
+                    </h3>
+                    <p style="padding-left: 10px;"><?=$data[$i]['desc'];?></p>
+                </div>
+
+              <p><?php if($i != count($data) - 1)  echo "<div style='border: 1px solid #444; width: 800px;margin: 0 auto;'></div>"; ?></p>
+
+
 
     <?php } ?>
-
+</div>
+</div>
 </div>
