@@ -22,7 +22,7 @@
                          <a style="margin-left: 5px;" href="<?=SITE_NAME;?>project/index/<?=$data[$i]['id'];?>"><?=$data[$i]['name'];?></a>
                         <span class="badge">2</span>
                     </h3>
-                    <p style="padding-left: 10px;"><?=$data[$i]['desc'];?></p>
+                    <p style="padding-left: 10px;"><?=$data[$i]['desc_p'];?></p>
                 </div>
 
               <p><?php if($i != count($data) - 1)  echo "<div style='border: 1px solid #444; width: 800px;margin: 0 auto;'></div>"; ?></p>

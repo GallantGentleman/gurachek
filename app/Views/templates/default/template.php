@@ -25,9 +25,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="<?=SITE_NAME;?>">Главная</a></li>
-                <li><a href="<?=SITE_NAME;?>about">О сайте</a></li>
-                <li><a href="<?=SITE_NAME;?>contacts">Контакты</a></li>
+                <li class="active"><a href="<?=SITE_NAME;?>">Main</a></li>
+                <li><a href="<?=SITE_NAME;?>about">About</a></li>
+                <li><a href="<?=SITE_NAME;?>contacts">Contacts</a></li>
             </ul>
         </div>
     </div>
@@ -46,9 +46,9 @@
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
             <div class="list-group">
                 <a class="list-group-item active">Menu</a>
-                <a href="<?=SITE_NAME;?>menu/auth" class="list-group-item"><span class="glyphicon glyphicon-log-in" style="margin-right:15px;"></span> Authorization</a>
-                <a href="<?=SITE_NAME;?>menu/reg" class="list-group-item"><span class="glyphicon glyphicon-pencil" style="margin-right:15px;"></span> Registration</a>
-                <a href="<?=SITE_NAME;?>menu/fb" class="list-group-item"><span class="glyphicon glyphicon-comment" style="margin-right:15px;"></span> Feedback</a>
+                <a href="<?=SITE_NAME;?>menu/auth" class="list-group-item"><span class="glyphicon glyphicon-log-in" style="margin-right:15px;"></span> My projects</a>
+                <a href="<?=SITE_NAME;?>menu/reg" class="list-group-item"><span class="glyphicon glyphicon-pencil" style="margin-right:15px;"></span> Create new project</a>
+                <a href="<?=SITE_NAME;?>menu/fb" class="list-group-item"><span class="glyphicon glyphicon-comment" style="margin-right:15px;"></span> Chating</a>
             <span class="list-group-item">
              <form class="form-inline">
   <div class="form-group has-success has-feedback">
