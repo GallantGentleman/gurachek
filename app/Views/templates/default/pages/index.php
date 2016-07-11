@@ -2,6 +2,7 @@
     <div class="col-lg-12">
       <div class="thumbnail" style="background: white;">
 
+<?php if(count($data) > 0) { ?>
 
     <?php for($i = 0; $i < count($data); $i++) { ?>
 
@@ -29,6 +30,7 @@
 
 
     <?php } ?>
+    <?php } else {echo "<h3><center>На сайте пока нет проектов.</center></h3>";} ?>
 </div>
 </div>
 </div>
