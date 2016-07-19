@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$_SESSION['auth'] = 'user';
+
 define("SITE_NAME", 'http://localhost/pets/pp/');
 
 use \riki\core;
