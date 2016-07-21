@@ -6,7 +6,9 @@ use app\controllers;
 
 class View {
 
-    public function generateView($template, $content, $data=null) {
+    public function generateView($template, $content, $title = '', $data = null) {
+
+        $score = '';
 
         if($data != null) {
             if(is_array($data)) {
@@ -14,7 +16,13 @@ class View {
             }
         }
 
+        if(!empty($title)) {
+          $score = ' -';
+        }
+
+        $title = $title . $score . ' People Projects Manager';
+
         include 'app/views/templates/default/' . $template . '.php';
-        
+
     }
 }

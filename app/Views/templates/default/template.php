@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
 
-    <title>People Projects Manager</title>
+    <title><?=$title;?></title>
 
     <link href="<?=SITE_NAME;?>src/css/bootstrap.css" rel="stylesheet">
     <link href="<?=SITE_NAME;?>src/css/offcanvas.css" rel="stylesheet">
@@ -44,22 +44,7 @@
 
         </div>
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-            <div class="list-group">
-                <a class="list-group-item active">Menu</a>
-                <a href="<?=SITE_NAME;?>menu/auth" class="list-group-item"><span class="glyphicon glyphicon-log-in" style="margin-right:15px;"></span> My projects</a>
-                <a href="<?=SITE_NAME;?>menu/reg" class="list-group-item"><span class="glyphicon glyphicon-pencil" style="margin-right:15px;"></span> Create new project</a>
-                <a href="<?=SITE_NAME;?>menu/fb" class="list-group-item"><span class="glyphicon glyphicon-comment" style="margin-right:15px;"></span> Chating</a>
-            <span class="list-group-item">
-             <form class="form-inline">
-  <div class="form-group has-success has-feedback">
-    <div class="input-group">
-      <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-      <input type="text" class="form-control" id="inputGroupSuccess3" aria-describedby="inputGroupSuccess3Status">
-    </div>
-  </div>
-</form>
-            </span>
-            </div>
+            <?php include 'app/views/templates/default/pages/user_menu.php'; ?>
         </div>
     </div>
     </div>

@@ -10,7 +10,7 @@ class ContactsController extends \riki\core\Controller {
     }
 
     function actionIndex() {
-        $this->view->generateView('template', 'contacts');
+        $this->view->generateView('template', 'contacts', 'Contacts');
     }
 
 }

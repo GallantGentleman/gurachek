@@ -10,7 +10,7 @@ class AboutController extends \riki\core\Controller {
     }
 
     function actionIndex() {
-        $this->view->generateView('template', 'about');
+        $this->view->generateView('template', 'about', 'About');
     }
 
 }

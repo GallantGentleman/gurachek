@@ -11,16 +11,20 @@ class MainController extends \riki\core\Controller {
 
     function actionIndex() {
 
-        $tmp = 'template';
-        $page = 'index';
+        $template = 'template';
+        $content = 'index';
+        $title = 'People Projects Manager';
         $model = $this->model->getData();
 
+        /**
         if(isset($_SESSION['auth']))  {
-          $tmp  = 'login';
-          $page = 'auth';
+          $template  = 'login';
+          $content = 'sign_in';
+          $title = 'Sign in / Sign up';
         }
+        **/
 
-        $this->view->generateView($tmp, $page, $model);
+        $this->view->generateView($template, $content, $title, $model);
     }
 
 }
