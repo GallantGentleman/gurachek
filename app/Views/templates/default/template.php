@@ -16,7 +16,7 @@
 
 </head>
 
-<body style="background: #444;">
+<body style="background: url(<?=SITE_NAME;?>src/img/bg.jpg);">
 <nav class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
         <div class="navbar-header">

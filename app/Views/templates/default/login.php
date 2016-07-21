@@ -1,65 +1,44 @@
-<!-- Background-color : #2b5c73; -->
+<?php //include 'app/views/templates/default/pages/' . $content . '.php'; ?>
 
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-
-    <title>People Projects Manager</title>
-
-    <link href="<?=SITE_NAME;?>src/css/bootstrap.css" rel="stylesheet">
-    <link href="<?=SITE_NAME;?>src/css/offcanvas.css" rel="stylesheet">
-    <link href="<?=SITE_NAME;?>src/css/common.css" rel="stylesheet">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <link rel="shortcut icon" href="<?=SITE_NAME;?>src/img/favicon.ico" type="image/x-icon">
 
-</head>
+    <title>Sign in / Sign up</title>
 
-<body style="background: #444;">
-<nav class="navbar navbar-fixed-top navbar-inverse">
+    <link href="<?=SITE_NAME;?>src/css/bootstrap.css" rel="stylesheet">
+    <link href="<?=SITE_NAME;?>src/css/signin.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
     <div class="container">
-        <div class="navbar-header">
 
-            <a class="navbar-brand" href="<?=SITE_NAME;?>"><em><b><span style="color: #2b5c73;">P</span><span style="color: #732b32;">P</span></b></em> Manager</a>
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="<?=SITE_NAME;?>">Main</a></li>
-                <li><a href="<?=SITE_NAME;?>about">About</a></li>
-                <li><a href="<?=SITE_NAME;?>contacts">Contacts</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<br>
-<br>
-<br>
-<br>
-<div class="container">
-    <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-xs-12 col-sm-9">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
 
-            <?php include 'app/views/templates/default/pages/' . $content . '.php'; ?>
+    </div> <!-- /container -->
 
-        </div>
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-            <div class="list-group">
-                <a class="list-group-item active">Menu</a>
-                <a href="<?=SITE_NAME;?>menu/auth" class="list-group-item"><span class="glyphicon glyphicon-log-in" style="margin-right:15px;"></span> My projects</a>
-                <a href="<?=SITE_NAME;?>menu/reg" class="list-group-item"><span class="glyphicon glyphicon-pencil" style="margin-right:15px;"></span> Create new project</a>
-                <a href="<?=SITE_NAME;?>menu/fb" class="list-group-item"><span class="glyphicon glyphicon-comment" style="margin-right:15px;"></span> Chating</a>
-            <span class="list-group-item">
-             <form class="form-inline">
-  <div class="form-group has-success has-feedback">
-    <div class="input-group">
-      <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-      <input type="text" class="form-control" id="inputGroupSuccess3" aria-describedby="inputGroupSuccess3Status">
-    </div>
-  </div>
-</form>
-            </span>
-            </div>
-        </div>
-    </div>
-    </div>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
