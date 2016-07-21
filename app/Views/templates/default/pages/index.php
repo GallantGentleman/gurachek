@@ -1,21 +1,11 @@
 <div class="row">
-    <div class="col-lg-12">
-      <div class="thumbnail" style="background: white;">
 
 <?php if(count($data) > 0) { ?>
 
     <?php for($i = 0; $i < count($data); $i++) { ?>
 
-    <?php
-
-    if(!empty($data[$i]['img'])) {
-      $image = $data[$i]['img'];
-    } else {
-      $image = "noimage.png";
-    }
-
-    ?>
-
+      <div class="col-xs-6 col-lg-4">
+          <div class="thumbnail">
                 <div class="caption" stype="margin-left: 50px;">
                     <h3>
                         <span class="glyphicon glyphicon-folder-open"> </span>
@@ -24,13 +14,8 @@
                     </h3>
                     <p style="padding-left: 10px;"><?=$data[$i]['desc_p'];?></p>
                 </div>
-
-              <p><?php if($i != count($data) - 1)  echo "<div style='border: 1px solid #444; width: 800px;margin: 0 auto;'></div>"; ?></p>
-
-
-
+          </div>
+      </div>
     <?php } ?>
-    <?php } else {echo "<h3><center>На сайте пока нет проектов.</center></h3>";} ?>
-</div>
-</div>
+    <?php } else { echo "<h3><center>На сайте пока нет проектов.</center></h3>"; } ?>
 </div>

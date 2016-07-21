@@ -1,0 +1,1 @@
+http://eightbitavatar.herokuapp.com/?id=100&s=male&size=60

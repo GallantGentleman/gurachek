@@ -3,6 +3,7 @@
 namespace app\models;
 
 use ErrorException;
+use PDOException;
 use \riki\core\System;
 
 class ProjectsListModel extends \riki\core\Model {
@@ -14,15 +15,15 @@ class ProjectsListModel extends \riki\core\Model {
       try {
         $stmt = $this->db->query('SELECT * FROM projects');
       } catch(PDOException $e) {
-        System::log($e);
+        System::log($e->getMessage());
       };
 
-        try {
+      try {
         while($row = $stmt->fetch()) {
           $data[] = $row;
         }
-      } catch(ErrorException $e) {
-        System::log($e);
+      } catch(PDOException $e) {
+        System::log($e->getMessage());
       };
 
       return $data;

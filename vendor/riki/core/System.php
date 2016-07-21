@@ -1,13 +1,14 @@
 <?php
 
-namespace \riki\core;
+namespace riki\core;
 
 class System {
 
     public static function log($msg) {
-      $msg = $msg . "\r\n"
 
-      $file = SITE_NAME . "log/log.txt";
+      $msg = $msg . date("d-M-y : h-m-s") . "\r\n";
+
+      $file = "log/log.txt";
       $mod = "a";
 
       $fp = fopen($file, $mod);
@@ -15,6 +16,8 @@ class System {
       $log = fwrite($fp, $msg);
 
       fclose($fp);
+
+      exit();
     }
 
 }

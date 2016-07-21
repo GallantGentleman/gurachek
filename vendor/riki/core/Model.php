@@ -4,6 +4,7 @@ namespace riki\core;
 
 use PDO;
 use PDOException;
+use \riki\core\System;
 
 abstract class Model {
 
@@ -13,7 +14,7 @@ abstract class Model {
         try {
           $this->db = new PDO("mysql:host=localhost;dbname=pp-manager", "root", "");
         } catch(PDOException $e) {
-          // log($e->getMessage());
+          System::log($e->getMessage());
         }
     }
 
