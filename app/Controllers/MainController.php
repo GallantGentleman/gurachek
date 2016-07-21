@@ -11,6 +11,14 @@ class MainController extends \riki\core\Controller {
 
     function actionIndex() {
 
+        if(isset($_GET['active'])) {
+          $_SESSION['first_visit'] = true;
+        }
+
+        if(isset($_GET['rm'])) {
+          unset($_SESSION['first_visit']);
+        }
+
         $template = 'template';
         $content = 'index';
         $title = 'People Projects Manager';

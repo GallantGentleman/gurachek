@@ -16,10 +16,10 @@ class UserController extends Controller {
     }
 
     public function actionSign_in() {
-        $this->view->generateView('login', 'sign_in', 'Sign in');
+        $this->view->generateView('login', 'sign_in', 'Sign In');
     }
 
     public function actionSign_up() {
-        $this->view->generateView('login', 'sign_up', 'Sign up');
+        $this->view->generateView('login', 'sign_up', 'Sign Up');
     }
 }

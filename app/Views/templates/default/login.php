@@ -11,6 +11,7 @@
     <title><?=$title;?></title>
 
     <link href="<?=SITE_NAME;?>src/css/bootstrap.css" rel="stylesheet">
+    <link href="<?=SITE_NAME;?>src/css/common.css" rel="stylesheet">
     <link href="<?=SITE_NAME;?>src/css/signin.css" rel="stylesheet">
 
   </head>

@@ -2,7 +2,7 @@
 session_start();
 
 //$_SESSION['auth'] = 'user';
-unset($_SESSION['auth']);
+//unset($_SESSION['auth']);
 
 define("SITE_NAME", 'http://localhost/pets/pp/');
 

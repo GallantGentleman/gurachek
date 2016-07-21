@@ -6,8 +6,8 @@
       <a href="<?=SITE_NAME;?>project/create" class="list-group-item"><span class="glyphicon glyphicon-pencil" style="margin-right:15px;"></span> Create new project</a>
       <a href="<?=SITE_NAME;?>project/chating" class="list-group-item"><span class="glyphicon glyphicon-comment" style="margin-right:15px;"></span> Chating</a>
     <?php } else { ?>
-      <a href="<?=SITE_NAME;?>user/sign_in" class="list-group-item"><span class="glyphicon glyphicon-user" style="margin-right:15px;"></span>Sign in</a>
-      <a href="<?=SITE_NAME;?>user/sign_up" class="list-group-item"><span class="glyphicon glyphicon-plus" style="margin-right:15px;"></span>Create User</a>
+      <a href="<?=SITE_NAME;?>user/sign_in" class="list-group-item"><span class="glyphicon glyphicon-user" style="margin-right:15px;"></span>Sign In</a>
+      <a href="<?=SITE_NAME;?>user/sign_up" class="list-group-item"><span class="glyphicon glyphicon-plus" style="margin-right:15px;"></span>Sign Up</a>
     <?php } ?>
 
 <span class="list-group-item">

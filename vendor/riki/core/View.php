@@ -20,6 +20,12 @@ class View {
           $score = ' -';
         }
 
+        if(!isset($_SESSION['first_visit'])) {
+            $template = 'login';
+            $content = 'choose';
+            $title = 'Welcome to';
+        }
+
         $title = $title . $score . ' People Projects Manager';
 
         include 'app/views/templates/default/' . $template . '.php';
