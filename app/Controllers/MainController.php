@@ -12,11 +12,11 @@ class MainController extends \riki\core\Controller {
     function actionIndex() {
 
         if(isset($_GET['active'])) {
-          $_SESSION['first_visit'] = true;
+          setcookie('first_visit', true, time()+7200);
         }
 
         if(isset($_GET['rm'])) {
-          unset($_SESSION['first_visit']);
+          setcookie('first_visit', '');
         }
 
         $template = 'template';

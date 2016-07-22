@@ -3,6 +3,10 @@ session_start();
 
 define("SITE_NAME", 'http://localhost/pets/pp/');
 
+echo $_COOKIE['auth'];
+echo "<br>";
+echo $_COOKIE['first_visit'];
+
 use \riki\core;
 use \app\controllers;
 use \riki\config;

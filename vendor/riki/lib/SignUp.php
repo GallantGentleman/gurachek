@@ -31,9 +31,10 @@ class SignUp extends Model {
         if($sql) {
           echo Common::e("Succes! Welcome, " . $name . ".");
           echo Common::linkTo(SITE_NAME);
-          $_SESSION['auth'] = true;
         } else
           echo Common::e("Some Trouble With Your Request ! Try Later...");
+
+        return true;
 
       }
     }

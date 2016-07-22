@@ -20,7 +20,7 @@ class View {
           $score = ' -';
         }
 
-        if(!isset($_SESSION['first_visit'])) {
+        if(!isset($_COOKIE['first_visit'])) {
             $template = 'login';
             $content = 'choose';
             $title = 'Welcome to';
