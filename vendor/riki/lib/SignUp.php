@@ -7,36 +7,37 @@ use \riki\lib\Common;
 
 class SignUp extends Model {
 
-    public function getData() {}
+    public $email;
+    public $name;
+    public $pass;
+
+    public $success;
+
+    public function getData(){}
 
     public function regUser() {
       if(isset($_POST['signup']['sign_up'])) {
 
-        $email = trim(htmlspecialchars($_POST['signup']['email']));
-        $name = trim(htmlspecialchars($_POST['signup']['name']));
-        $pass = trim(htmlspecialchars($_POST['signup']['pass']));
+        $this->email = trim(htmlspecialchars($_POST['signup']['email']));
+        $this->name = trim(htmlspecialchars($_POST['signup']['name']));
+        $this->pass = trim(htmlspecialchars($_POST['signup']['pass']));
         $pass2 = trim(htmlspecialchars($_POST['signup']['pass2']));
         $img = rand(1, 66);
 
-        if($pass != $pass2) {
-            echo Common::e("Passwords do not match !");
-            return false;
+        if(!empty($this->email) and !empty($this->name) and !empty($this->pass) and !empty($pass2)) {
+
+            if($this->pass != $pass2) {
+                echo Common::e("Passwords do not match !");
+                return false;
+            }
+
+            $this->pass = md5($this->pass);
+
+            $sql = $this->db->prepare("INSERT INTO `users`(`name`, `email`, `password`, `img`) VALUES (?, ?, ?, ?)");
+            $sql->execute(array($this->name, $this->email, $this->pass, $img));
+
+            $this->success = true;
         }
-
-        $pass = md5($pass);
-
-        $sql = $this->db->prepare("INSERT INTO `users`(`name`, `email`, `password`, `img`) VALUES (?, ?, ?, ?)");
-        $sql->execute(array($name, $email, $pass, $img));
-
-        if($sql) {
-          echo Common::e("Succes! Welcome, " . $name . ".");
-          echo Common::linkTo(SITE_NAME);
-        } else
-          echo Common::e("Some Trouble With Your Request ! Try Later...");
-
-        return true;
-
       }
     }
-
 }

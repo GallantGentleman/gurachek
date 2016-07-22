@@ -1,7 +1,8 @@
+<?php $auth = $GLOBALS['system_cook']->getCook("auth"); ?>
 <div class="list-group">
     <a class="list-group-item active" style="background: #dc815b;border: 0px;">Menu</a>
 
-    <?php if(isset($_COOKIE['auth'])) { ?>
+    <?php if(isset($auth)) { ?>
       <a href="<?=SITE_NAME;?>user/account/?id=<?=$_SESSION['auth'];?>" class="list-group-item"><span class="glyphicon glyphicon-log-in" style="margin-right:15px;"></span> Account</a>
       <a href="<?=SITE_NAME;?>project/list" class="list-group-item"><span class="glyphicon glyphicon-book" style="margin-right:15px;"></span> My projects</a>
       <a href="<?=SITE_NAME;?>project/create" class="list-group-item"><span class="glyphicon glyphicon-pencil" style="margin-right:15px;"></span> Create new project</a>

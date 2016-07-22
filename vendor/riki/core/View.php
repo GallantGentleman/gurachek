@@ -4,6 +4,8 @@ namespace riki\core;
 
 use app\controllers;
 
+use \riki\core\System;
+
 class View {
 
     public function generateView($template, $content, $title = '', $data = null) {
@@ -20,7 +22,9 @@ class View {
           $score = ' -';
         }
 
-        if(!isset($_COOKIE['first_visit'])) {
+        echo "asdsa" . $GLOBALS['system_cook']->getCook("first");
+
+        if(!isset($cook)) {
             $template = 'login';
             $content = 'choose';
             $title = 'Welcome to';

@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use \riki\core\System;
+
 class MainController extends \riki\core\Controller {
 
     function __construct() {
@@ -12,11 +14,7 @@ class MainController extends \riki\core\Controller {
     function actionIndex() {
 
         if(isset($_GET['active'])) {
-          setcookie('first_visit', true, time()+7200);
-        }
-
-        if(isset($_GET['rm'])) {
-          setcookie('first_visit', '');
+          $GLOBAL['system_cook']->setCook("first", "1");
         }
 
         $template = 'template';

@@ -7,6 +7,7 @@ use \riki\core\View;
 
 use \riki\lib\SignUp;
 use \riki\lib\Common;
+use \riki\core\System;
 
 class UserController extends Controller {
 
@@ -25,11 +26,23 @@ class UserController extends Controller {
     public function actionSign_up() {
         $signup = new SignUp();
 
-        if($signup->regUser() == true) {
-          setcookie('auth', $signup->name, time()+7200);
-          echo Common::e("Succes! Welcome, " . $name . ".");
+        $signup->regUser();
+
+        if($signup->success) {
+
+          $name = $signup->name;
+
+          echo "Name - " . $name;
+
+          $GLOBALS['system_cook']->setCook("auth", $name);
+
+          echo "<br>Cookie - " . $GLOBALS['system_cook']->getCook("auth");
+
+          echo Common::e("Succes! Welcome, " . $signup->name . ".");
           echo Common::linkTo(SITE_NAME);
-        }
+
+        } else
+          //echo Common::e("Дела идут [X * (Y - E) = ВО] !");
 
         $this->view->generateView('login', 'sign_up', 'Sign Up');
     }
